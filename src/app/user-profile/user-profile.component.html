@@ -1,0 +1,19 @@
+<div class="userProfile">
+  <div class="top">
+    <img class="photo" [src]="User.photo" [alt]="User.name">
+    <div class="names">
+      <h2 class="name">Nom : {{User.name}}</h2>
+      <h2 class="name">Prénom : {{User.firstName}}</h2>
+    </div>
+  </div>
+  <h3 class="quote">Quote : {{User.quote}}</h3>
+  <div class="inputQuote">
+    <label for="quote">What quote do you want ? </label>
+    <input [(ngModel)]="User.quote" type="text" id="quote">
+  </div>
+  <p class="age" *ngIf="showAge">Age : {{User.age}}</p>
+  <div class="button">
+    <button (click)="toggleAge()">Afficher / Masquer mon âge</button>
+  </div>
+</div>
+
